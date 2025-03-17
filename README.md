@@ -32,7 +32,7 @@ CREATE DATABASE academy;
 ```sql
 CREATE TABLE Students (
 	s_id SERIAL PRIMARY KEY,
-	name text,
+ 	name text,
 	start_year interval YEAR
 );
 
