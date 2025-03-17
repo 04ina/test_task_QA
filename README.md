@@ -28,7 +28,7 @@ o4ina=#
 CREATE DATABASE academy;
 \c academy
 ```
-### 3. Создать таблицы согласно приложенной схеме
+### 3. Создать необходимые таблицы
 ```sql
 CREATE TABLE Students (
 	s_id SERIAL PRIMARY KEY,
