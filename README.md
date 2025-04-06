@@ -13,7 +13,7 @@ docker pull postgres
 docker run -itd -e POSTGRES_USER=o4ina -e POSTGRES_PASSWORD=qwerty -p 5432:5432 -v /data:/var/lib/postgresql/data --name postgresql postgres
 ```
 
-Работать с Postgres-ом мы будем посредством терминального клиента psql. запуск клиента будет производиться посредством команды docker exec
+Работать с Postgres-ом мы будем посредством терминального клиента psql. Запуск клиента будет производиться посредством команды docker exec
 
 ```
 $ docker exec -ti postgresql psql -U o4ina
@@ -191,7 +191,8 @@ RETURNING *;
 (10 rows)
 
 INSERT 0 10
----------------------------------------------------------------------------
+```
+```sql
 WITH course_names AS (
 	SELECT * FROM (VALUES 
 		('Дискретная','математика'),
@@ -230,7 +231,8 @@ RETURNING *;
 (10 rows)
 
 INSERT 0 10
----------------------------------------------------------------------------
+```
+```sql
 INSERT INTO exams(s_id, c_no, score) 
 	SELECT * FROM (
 		SELECT DISTINCT ON (s.s_id, c.c_no)
