@@ -152,7 +152,7 @@ ORDER BY "avg score" DESC NULLS LAST;
 ### 8. Сгенерировать скрипт, который наполняет таблицы произвольными данными (можно с помощью psql, можно с помощью любого языка программирования)
 
 Скрипт наполнения таблицы полностью написан на SQL. Получение разнообразных ФИО и названий дисциплин происходит за счет случайного комбинирования частей последних. 
-
+#### заполнение таблицы students
 ```sql
 WITH names AS (
 	SELECT * FROM (VALUES 
@@ -192,6 +192,7 @@ RETURNING *;
 
 INSERT 0 10
 ```
+#### заполнение таблицы courses
 ```sql
 WITH course_names AS (
 	SELECT * FROM (VALUES 
@@ -232,6 +233,7 @@ RETURNING *;
 
 INSERT 0 10
 ```
+#### заполнение таблицы exams
 ```sql
 INSERT INTO exams(s_id, c_no, score) 
 	SELECT * FROM (
